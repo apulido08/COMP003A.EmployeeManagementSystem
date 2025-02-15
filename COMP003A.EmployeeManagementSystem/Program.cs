@@ -4,7 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            try
+            {
+                Employee employee = new Employee("E001", "John", "Doe", 6000, "A");
+                employee.DisplayEmployeeInfo();
+
+                HRDepartment
+            }
         }
     }
 }
