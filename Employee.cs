@@ -11,7 +11,8 @@ public class Employee
 	public string EmployeeId
 	{
 		get { return _employeeId; }
-		
+
+
 
 		public string FirstName
 	{ get { return _firstName; }
@@ -37,7 +38,7 @@ public class Employee
 		}
 
 		public string LastName
-		{ get { return _lastName; }
+	{ get { return _lastName; }
 		set
 		{
 			if (string.IsNullOrEmpty(value))
@@ -48,7 +49,7 @@ public class Employee
 		}
 
 		public double Salary
-		{ get { return _salary; }
+	{ get { return _salary; }
 		set
 		{
 			if (string.IsNullOrWhiteSpace(value))
@@ -59,7 +60,63 @@ public class Employee
 		}
 
 
-		public Employee(string employeeId string firstName string lastname )
+		public Employee(string employeeId string firstName string lastname double salary)
+	{
+		_employeeId = employeeId;
+		_firstName = firstName;
+		_lastName = lastname;
+		_salary = salary;
+		_middleName = middleName;
+
+	}
+
+	public void PrintFullName()
+	{  PrintFullName();
+
+	if(string.NullorEmpty(MiddleName));
+		{
+			Console.WriteLine($"{FirstName} {LastName}");
+		}
+		else
+		{
+			Console.WriteLine($"{FirstName} {MiddleName} {LastName}");
+		}
+
+		public void DisplayEmployeeInfo()
+	{
+		PrintFullName();
+		Console.WriteLine($"{Salary;}");
+	}
+	
+	public abstract class Department
+	{
+		public string DepartmentName
+			{ get; set; }
+
+		public abstract string GetDepartmentDetails();
+		{  get; set; }
+
+	public void DisplaydepartmentInfo()
+	{
+		Console.WriteLine($"Department: {DepartmentName}");
+	}
+
+	public class HRDepartment : Department, IDepartmentOperations
+	{
+		public HRDepartment()
+		{
+			DepartmentName = "Human Resources";
+
+		}
+	}
+	
+
+
+
+
+
+
+}
 	
 
 }
