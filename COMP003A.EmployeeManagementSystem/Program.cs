@@ -39,14 +39,17 @@ namespace COMP003A.EmployeeManagementSystem
             employee.DisplayEmployeeInfo();
 
 
-
+            HRDepartment hrDepartment = new HRDepartment();
+            hrDepartment.GetDepartmentDetails();
+            
+            ITDepartment iTDepartment = new ITDepartment();
+            iTDepartment.GetDepartmentDetails();
 
         }
 
-     
-        
-       
-            
-        
+
+
+
+
     }
 }
