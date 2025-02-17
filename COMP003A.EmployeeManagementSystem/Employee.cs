@@ -14,7 +14,7 @@ namespace COMP003A.EmployeeManagementSystem
     {
         // Private Fields
 
-        private string _employeeId;
+        private readonly string _employeeId;
         private string _firstName;
         private string _middleName;
         private string _lastName;
@@ -50,10 +50,9 @@ namespace COMP003A.EmployeeManagementSystem
             get { return _middleName; }
             set
             {
-                if (string.IsNullOrEmpty(value))
+                if (value == null)
                 {
-                    throw new ArgumentException("Middevname cannot be empty.");
-
+                    _middleName = string.Empty ;
                 }
                 _middleName = value;
             }
@@ -101,13 +100,17 @@ namespace COMP003A.EmployeeManagementSystem
         // Methods
         public void PrintFullName()
         {
-           
 
-            
+            if (string.IsNullOrEmpty(MiddleName))
+            {
                 Console.WriteLine($"{FirstName} {LastName}");
+            }
 
+            else
+            {
                 Console.WriteLine($"{FirstName} {MiddleName} {LastName}");
-           
+
+            }
         }
         
 
@@ -116,8 +119,9 @@ namespace COMP003A.EmployeeManagementSystem
 
         public void DisplayEmployeeInfo()
         {
-         
-
+            
+            Console.WriteLine($"Employee {EmployeeId}");
+            
             PrintFullName();
             Console.WriteLine($"Salary: {Salary:C}");
         }

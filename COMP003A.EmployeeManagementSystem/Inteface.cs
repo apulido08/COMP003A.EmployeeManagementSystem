@@ -5,7 +5,7 @@
 
 namespace COMP003A.EmployeeManagementSystem
 {
-    public interface IDepartmentOperations
+    interface IDepartmentOperations
     {
         void Operate();
     }

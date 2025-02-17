@@ -16,11 +16,13 @@ namespace COMP003A.EmployeeManagementSystem
 
         public override string GetDepartmentDetails()
         {
-            return "Handles employees relations and recruitment";
+            return "Handles: employees relations and recruitment";
         }
 
         public void Operate()
         {
+            Console.WriteLine($"Department: {DepartmentName} ");
+            Console.WriteLine(GetDepartmentDetails());   
             Console.WriteLine("HR department is managing employee onboarding.");
         }
     }

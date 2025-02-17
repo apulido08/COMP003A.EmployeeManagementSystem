@@ -17,17 +17,17 @@ namespace COMP003A.EmployeeManagementSystem
 
             public override string GetDepartmentDetails()
             {
-                return "Manages technical resources and infrastructures,";
+                return "Details : Manages technical resources and infrastructures,";
             }
 
             public void Operate()
             {
-                Console.WriteLine("IT department is maintaning network security.");
+                Console.WriteLine($"Department: {DepartmentName} ");
+            Console.WriteLine(GetDepartmentDetails());
+            Console.WriteLine("IT department is maintaning network security.");
             }
 
-            public interface IDepartmentOperations
-            {
-                void Operate();
-            }
+            
+            
         }
     }
