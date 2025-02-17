@@ -1,91 +1,107 @@
-﻿using System;
+﻿// Author: [Alvaro Pulido]
+// Course: COMP003A
+// Faculty: Jonathan Cruz
+// Purpose: Employee management system demonstrating OOP principles in C#
 
-public class Employee
+/// <summary>
+/// Represents an Employee 
+/// </summary>
+namespace COMP003A.EmployeeManagementSystem
 {
-	private string _employeeId;
-	private string _firstName;
-	private string _middleName();
-	private string _lastName;
-	private double _salary;
-
-	public string EmployeeId
+	internal class Employee
 	{
-		get { return _employeeId; }
+		// Private Fields
+
+		private string _employeeId;
+		private string _firstName;
+		private string _middleName;
+		private string _lastName;
+		private double _salary;
+
+		// Public Properties
+
+		public string EmployeeId
+		{
+			get { return _employeeId; }
 
 
 
 		public string FirstName
-	{ get { return _firstName; }
-		set
-		{
-			if (string.IsNullOrEmpty(value))
+		{ get { return _firstName; }
+			set
 			{
-				throw new ArgumentException("First name cannot be empty")
-
+				if (string.IsNullOrEmpty(value))
+				{
+					throw new ArgumentException("First name cannot be empty.")
+	
 			}
-			_firstName = value;
-		}
+				_firstName = value;
+			}
 
 		public string MiddleName
-	{ get { return _middleName; }
-		set
-		{
-			if (string.IsNullOrEmpty(value))
+		{ get { return _middleName; }
+			set
 			{
-				throw new ArgumentException("")
+				if (string.IsNullOrEmpty(value))
+				{
+					throw new ArgumentException("Middevname cannot be empty.")
+				}
+				_middleName = value;
 			}
-			_middleName = value;
-		}
 
 		public string LastName
-	{ get { return _lastName; }
-		set
-		{
-			if (string.IsNullOrEmpty(value))
+		{ get { return _lastName; }
+			set
 			{
-				throw new ArgumentException("")
+				if (string.IsNullOrEmpty(value))
+				{
+					throw new ArgumentException("Last namr cannot be empty.")
+				}
+				_lastName = value;
 			}
-			_lastName = value;
-		}
 
 		public double Salary
-	{ get { return _salary; }
-		set
-		{
-			if (string.IsNullOrWhiteSpace(value))
+		{ get { return _salary; }
+			set
 			{
-				throw new ArgumentException("")
+				if (value < 0)
+				{
+					throw new ArgumentException("Salary cannot be less than 0")
+				}
+				_salary = value;
 			}
-			_salary = value;
-		}
 
 
-		public Employee(string employeeId string firstName string lastname double salary)
-	{
-		_employeeId = employeeId;
-		_firstName = firstName;
-		_lastName = lastname;
-		_salary = salary;
-		_middleName = middleName;
-
-	}
-
-	public void PrintFullName()
-	{ PrintFullName();
-
-		if (string.NullorEmpty(MiddleName)) ;
+		// Constructor
+		public Employee(string employeeId string firstName string middleName string lastName double salary)
 		{
-			Console.WriteLine($"{FirstName} {LastName}");
+			_employeeId = employeeId;
+			FirstName = firstName;
+			LastName = lastName;
+			Salary = salary;
+			MiddleName = middleName;
+
 		}
+
+		// Methods
+		public void PrintFullName()
+		{ 
+
+			if (string.NullorEmpty(MiddleName)) ;
+			{
+				Console.WriteLine($"{FirstName} {LastName}");
+			}
 		else
-		{
-			Console.WriteLine($"{FirstName} {MiddleName} {LastName}");
-		}
+			{
+				Console.WriteLine($"{FirstName} {MiddleName} {LastName}");
+			}
 
 		public void DisplayEmployeeInfo()
-	{
-		PrintFullName();
-		Console.WriteLine($"{Salary;}");
-	}
+		{
+			Console.Writeline("");
+
+			PrintFullName();
+			Console.WriteLine($"Salary: {Salary:C}");
+		} }
 
 }

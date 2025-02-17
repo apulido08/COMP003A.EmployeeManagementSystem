@@ -1,17 +1,24 @@
-﻿using System;
-using static HRDepartment.ITDepartment;
+﻿// Author: [Alvaro Pulido]
+// Course: COMP003A
+// Faculty: Jonathan Cruz
+// Purpose: Employee management system demonstrating OOP principles in C#
 
-public abstract class Department
+/// <summary>
+/// Abstract class for departments
+/// </summary>
+namespace COMP003A.EmployeeManagementSystem
+{
+    public abstract class Department
 {
     public string DepartmentName
     { get; set; }
 
     public abstract string GetDepartmentDetails();
-		{  get; set; }
 
-public void DisplaydepartmentInfo()
+public void DisplayDepartmentInfo()
 {
     Console.WriteLine($"Department: {DepartmentName}");
+    Console.WriteLine(GetDepartmentDetails));
 }
 
 public class HRDepartment : Department, IDepartmentOperations
@@ -22,7 +29,7 @@ public class HRDepartment : Department, IDepartmentOperations
 
     }
 
-    public override GetDepartmentDetails()
+    public override string GetDepartmentDetails()
     {
         return "Handles employees relations and recruitment";
     }
@@ -32,28 +39,7 @@ public class HRDepartment : Department, IDepartmentOperations
         Console.WriteLine("HR department is managing employee onboarding.");
     }
 
-    public class ITDepartment : Department, IDepartmentOperations
-    {
-        public ITDepartment()
-        {
-            DepartmentName = "Information Technology";
-        }
-
-        public override global GetDepartmentDetails()
-        {
-            return "Manages technical resources and infrastructures,";
-        }
-
-        public void Operate()
-        {
-            Console.WriteLine("IT department is maintaning network security.");
-        }
-
-        public interface IDepartmentOperations
-        {
-            void Operate();
-        }
-    }
+   
 }
 	
 
