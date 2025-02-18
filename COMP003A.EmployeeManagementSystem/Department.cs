@@ -9,12 +9,23 @@
 namespace COMP003A.EmployeeManagementSystem
 {
     public abstract class Department
+    /// <summary>
+    /// Gets and sets the department name
+    /// </summary>
     {
         public string DepartmentName
+            /// <summary>
+            /// dDetails for each department
+            /// </summary>
+            /// <return> String details for each dep. details </return>
+          
 
         { get; set; }
 
         public abstract string GetDepartmentDetails();
+        /// <summary>
+        /// displays the info for the department 
+        /// </summary>
 
         public void DisplayDepartmentInfo()
         {

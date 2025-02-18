@@ -4,7 +4,6 @@
 // Purpose: Employee management system demonstrating OOP principles in C#
 
 
-using System.Linq.Expressions;
 
 namespace COMP003A.EmployeeManagementSystem
 {
