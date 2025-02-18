@@ -9,6 +9,9 @@
 /// Represents an Employee 
 /// </summary>
 namespace COMP003A.EmployeeManagementSystem
+    /// <summary>
+    /// Method entering for employee and the details
+    /// </summary>
 {
     internal class Employee
     {
@@ -26,6 +29,9 @@ namespace COMP003A.EmployeeManagementSystem
         {
             get { return _employeeId; }
         }
+        /// <summary>
+        /// Gets the employee id. also sets it 
+        /// </summary>
 
 
 
@@ -43,6 +49,9 @@ namespace COMP003A.EmployeeManagementSystem
             }
                 _firstName = value;
             } }
+        /// <summary>
+        /// Gets the first name, must have an input, cannot be empty
+        /// </summary>
 
 
         public string MiddleName
@@ -57,6 +66,9 @@ namespace COMP003A.EmployeeManagementSystem
                 _middleName = value;
             }
         }
+        /// <summary>
+        /// Calls for the middle name. It may be left out.
+        /// </summary>
 
         public string LastName
         {
@@ -72,6 +84,10 @@ namespace COMP003A.EmployeeManagementSystem
             }
 
         }
+        /// <summary>
+        /// Calls for the last name input.
+        /// </summary>
+
         public double Salary
         {
             get { return _salary; }
@@ -85,6 +101,15 @@ namespace COMP003A.EmployeeManagementSystem
                 _salary = value;
             } }
 
+        /// <summary>
+        /// calls for the salary to have an input. value cannot be zero.
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="firstName"></param>
+        /// <param name="middleName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="salary"></param>
+
 
         // Constructor
         public Employee(string employeeId ,string firstName, string middleName, string lastName ,double salary)
@@ -96,6 +121,10 @@ namespace COMP003A.EmployeeManagementSystem
             MiddleName = middleName;
 
         }
+
+        /// <summary>
+        /// calls for the name to be displayed of the employee
+        /// </summary>
 
         // Methods
         public void PrintFullName()
@@ -112,6 +141,10 @@ namespace COMP003A.EmployeeManagementSystem
 
             }
         }
+
+        /// <summary>
+        /// shows full name and employee details 
+        /// </summary>
         
 
 
