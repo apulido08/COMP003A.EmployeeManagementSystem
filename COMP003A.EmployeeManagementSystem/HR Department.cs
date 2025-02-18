@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace COMP003A.EmployeeManagementSystem
-{
+{ /// <summary>
+/// information for the department that is being called
+/// </summary>
     public class HRDepartment : Department, IDepartmentOperations
     {
         public HRDepartment()

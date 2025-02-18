@@ -9,7 +9,9 @@ namespace COMP003A.EmployeeManagementSystem
   
    
         public class ITDepartment : Department, IDepartmentOperations
-        {
+        {/// <summary>
+        /// calls the IT department information
+        /// </summary>
             public ITDepartment()
             {
                 DepartmentName = "Information Technology";

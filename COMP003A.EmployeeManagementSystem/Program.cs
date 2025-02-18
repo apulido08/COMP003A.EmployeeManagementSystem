@@ -10,6 +10,9 @@ namespace COMP003A.EmployeeManagementSystem
     internal class Program
     {
         static void Main(string[] args)
+            /// <summary>
+            /// Main Menu for onboarding employee
+            /// </summary>
         {
             string employeeID;
             string firstName;
@@ -85,11 +88,18 @@ namespace COMP003A.EmployeeManagementSystem
             Employee employee = new Employee(employeeID, firstName, middleName, lastName, salary);
             employee.DisplayEmployeeInfo();
 
+            /// <summary>
+            /// Calls for the department information
+            /// </summary>
 
 
 
 
 
+
+            /// <summary>
+            /// Dsiplays information for each department
+            /// </summary>
             ITDepartment iTDepartment = new ITDepartment();
             iTDepartment.GetDepartmentDetails();
             iTDepartment.Operate();
